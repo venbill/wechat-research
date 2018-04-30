@@ -1,0 +1,21 @@
+<!--mine.wxml-->
+<view>
+
+
+<view wx:if="{{orders.length==0}}" >
+	<image src="/img/nodata-search.png"></image>
+</view>
+
+	
+	<view wx:else="{{orders.length>0}}" class="profile-wrapper" catchtap="loadProfile">
+		<block wx:for="{{orders}}" >
+			<view bindtap="goto" data-id="{{item.id}}" class="profile" id="{{item.id}}">
+				
+				<view  class="profile-item"> {{index+1}}.{{item.prizeName}} </view>
+				<text class="userinfo-desc">{{item.createTime}}</text>
+			</view>
+		</block>
+	</view>
+	
+	<!-- <button type="default" class="btn-quit"> 退出登录 </button> -->
+</view>

@@ -1,0 +1,53 @@
+
+	<view >
+		  <view class="content-view content-text">  
+            <view class="weui-label">恭喜您获得一份奖品：{{prize.name}}.请填写以下信息领取奖品:</view>  
+          </view>  
+		 
+		  </view>
+		  
+<view >  
+  <form bindsubmit="formSubmit" bindreset="formReset">  
+    <view class="login_info" >  
+      <view class=" login_form">  
+
+
+		
+	  
+		
+
+
+
+
+
+        <view class="weui-cell weui-cell_input">  
+          <view class="weui-cell__hd">  
+            <view class="weui-label">姓名:</view>  
+          </view>  
+          <view class="weui-cell__bd">  
+            <input class="weui-input" placeholder="收件人姓名" type="text" maxlength="10" value="{{userInfo.name}}" name="name"/>  
+          </view>  
+        </view>  
+        <view class="weui-cell weui-cell_input">  
+          <view class="weui-cell__hd">  
+            <view class="weui-label">手机:</view>  
+          </view>  
+          <view class="weui-cell__bd">  
+            <input class="weui-input" placeholder="收件人电话" type="text" maxlength="11" value="{{userInfo.tel}}" name="tel"/>  
+          </view>  
+        </view>  
+        <view class="weui-cell weui-cell_input">  
+          <view class="weui-cell__hd">  
+            <view class="weui-label">地址:</view>  
+          </view>  
+          <view class="weui-cell__bd">  
+            <input class="weui-input" placeholder="收货地址" type="text" maxlength="10"  name="address"/>  
+          </view>  
+        </view>  
+        <view class="weui-btn-area">  
+          <button class="weui-btn" type="primary" formType="submit" bindsubmit="formSubmit">领取</button>  
+        </view>  
+      </view>  
+    </view>  
+  </form>  
+</view>  

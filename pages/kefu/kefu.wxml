@@ -1,0 +1,33 @@
+
+  <form bindsubmit="formSubmit" bindreset="formReset">  
+    <view class="login_info" >  
+      <view class=" login_form">  
+
+
+		
+	  
+		
+
+
+
+
+
+        <view class="weui-cell weui-cell_input">  
+          <view class="weui-cell__hd">  
+            <view class="weui-label">客服电话:</view>  
+          </view>  
+          <view class="weui-cell__bd">  
+            <text class="weui-input">02197412973</text>  
+          </view>  
+        </view>  
+        <view class="weui-cell weui-cell_input">  
+          <view class="weui-cell__hd">  
+            <view class="weui-label">联系地址:</view>  
+          </view>  
+          <view class="weui-cell__bd">  
+            <text class="weui-input">浙江省杭州市滨江区润和信雅达</text>  
+          </view>  
+        </view>  
+      </view>  
+    </view>  
+  </form>  

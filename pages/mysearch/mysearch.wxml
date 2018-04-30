@@ -1,0 +1,28 @@
+<template name="master-column">
+	<view class="master-info"  data-master="czy">
+		<image  bindtap="toQuestion" data-id="{{id}}"  src="/img/searchIcon.png"></image>
+		<view class="master-brief"  bindtap="toQuestion" data-id="{{id}}" >
+			<view class="master-user">{{name}}</view>
+			<view class="master-intro">{{description}}</view>
+			<view class="master-fans">{{createTime}} 提交</view>
+		</view>
+		<view wx:if="{{received}}" class="master-follow">已领取</view>
+		<view bindtap="toReceive" data-id="{{id}}" wx:else="{{received}}" class="master-follow-show">领取奖品</view>
+	</view>
+</template>
+
+
+
+
+
+<view wx:if="{{researchList.length==0}}" >
+
+	<image src="/img/nodata-search.png"></image>
+</view>
+
+<view wx:else="{{researchList.length>0}}" class="column-wrapper">
+	<block wx:for="{{researchList}}">
+		<template is="master-column" data="{{...item}}"/>
+	</block>
+</view>
+

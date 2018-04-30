@@ -1,0 +1,40 @@
+
+		  
+<view >  
+  <form bindsubmit="formSubmit" bindreset="formReset">  
+    <view class="login_info" >  
+      <view class=" login_form">  
+
+
+		
+	  
+		
+
+
+
+
+
+        <view class="weui-cell weui-cell_input">  
+          <view class="weui-cell__hd">  
+            <view class="weui-label">姓名:</view>  
+          </view>  
+          <view class="weui-cell__bd">  
+            <input class="weui-input" placeholder="请输入姓名" value="{{userInfo.name}}" type="text" maxlength="10"  name="name"/>  
+          </view>  
+        </view>  
+        <view class="weui-cell weui-cell_input">  
+          <view class="weui-cell__hd">  
+            <view class="weui-label">手机:</view>  
+          </view>  
+          <view class="weui-cell__bd">  
+            <input class="weui-input" placeholder="请输入手机号码" value="{{userInfo.tel}}" type="text" maxlength="11"  name="tel"/>  
+          </view>  
+        </view>  
+       
+        <view class="weui-btn-area">  
+          <button class="weui-btn" formType="submit" bindsubmit="formSubmit"  type="primary" >保存</button>  
+        </view>  
+      </view>  
+    </view>  
+  </form>  
+</view>  

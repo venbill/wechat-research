@@ -1,0 +1,34 @@
+<template name="master-column">
+	<view class="master-info" data-master="czy">
+		<view class="ques-index">{{index+1}}</view>
+		<view class="master-brief">
+			<view class="master-user">{{mainContent}}</view>
+<radio-group bindchange="saveAnswer">
+<label class="radio option-content"  wx:for-items="{{optionList}}" wx:for-item="option">
+ <radio  value="{{id}},{{option.id}}" checked="{{option.isAnswer}}" />{{option.content}}
+ </label>
+
+ </radio-group>
+
+
+
+		</view>
+	</view>
+</template>
+
+
+
+
+
+<view class="column-title">{{basicInfo.name}}</view>
+<view  decode="{{true}}" space="{{true}}" class="column-content">{{basicInfo.description}}</view>
+<view class="column-wrapper">
+	<block wx:for="{{questionList}}">
+		<template is="master-column" data="{{index:index,...item}}"/>
+	</block>
+</view>
+
+<button wx:if="{{basicInfo.answered}}" type="primary" data-name="shareBtn" open-type="share" class="btn-submit">分享</button>
+
+<button wx:else="{{basicInfo.answered}}" type="primary" bindtap="commit" class="btn-submit"> 提交 </button>
+

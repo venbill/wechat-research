@@ -1,0 +1,26 @@
+<template name="master-column">
+	<view class="master-info" bindtap="toQuestion" data-id="{{id}}"  data-master="czy">
+		<image src="/img/searchIcon.png"></image>
+		<view class="master-brief">
+			<view class="master-user">{{name}}</view>
+			<view class="master-intro">{{description}}</view>
+			<view class="master-fans">{{answerNo}} 提交</view>
+		</view>
+		<view wx:if="{{answered}}" class="master-follow">已回答</view>
+		<view wx:else="{{answered}}" class="master-follow-show">回答</view>
+	</view>
+</template>
+
+
+
+
+<view class="search-bar">
+	<input placeholder="搜索感兴趣的问卷" bindinput="search"></input>
+</view>
+<view class="column-title">最新调研</view>
+<view class="column-wrapper">
+	<block wx:for="{{researchList}}">
+		<template is="master-column" data="{{...item}}"/>
+	</block>
+</view>
+

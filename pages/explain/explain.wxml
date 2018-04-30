@@ -1,0 +1,20 @@
+<view>
+	<view class="ques-wrapper line-css">
+		<view class="ques-info">
+			<image src="/img/avatar/basicprofile.png"></image>
+			<view class="ques-sec">
+				<view class="ques-user">中国传统文化教育
+</view>
+			</view>
+		</view>
+		<view class="ques-content">
+		<text>1.关于奖品发放有任何疑问可以致电客服沟通</text>
+		
+		</view>
+		<view class="ques-content">
+<text>2.奖品发放最终解释权归本公司</text>
+		</view>
+
+
+        </view>
+		</view>

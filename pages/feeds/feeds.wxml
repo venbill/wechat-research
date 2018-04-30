@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view>
+<swiper indicator-dots="{{indicatorDots}}"  
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">  
+      <block wx:for="{{imgUrls}}">  
+        <swiper-item>  
+           <navigator  hover-class="navigator-hover">  
+            <image src="{{item.url}}" class="img" />  
+           </navigator>   
+        </swiper-item>  
+      </block>  
+</swiper>  
+</view>
+<view class="menu_container">
+    <view class="menu_item" wx:for="{{menus}}" wx:for-index="idx" wx:for-item="menu">
+        <image bindtap="toTab" data-link="{{menu.link}}" class="menu_icon" src="{{menu.url}}" />
+        <text class="menu_name">{{menu.name}}</text>
+    </view>
+</view>
+
+<view>
+	<view class="ques-wrapper line-css">
+		<view class="ques-info">
+			<image src="/img/avatar/basicprofile.png"></image>
+			<view class="ques-sec">
+				<view class="ques-user">中国传统文化教育
+</view>
+			</view>
+		</view>
+		<view class="ques-content">随着现代社会的飞速发展，当今网络文化、快餐文化大行其道，对于传统文化的学习和传承成为大学教育中缺失的一环。为倡导大家重视传统文化的传承传播，我们决定做一些关于传统文化的调研。此举对传统文化的保护与发展影响深远，同时也有利于社会公民综合素质的培养。深入了解传统文化瑰宝，调查传统文化当前的发展、传承现状，找出影响传统文化发展传播的症结所在，研究并从本专业的角度并对形传统文化的发展传播提出建议。
+		</view>
+
+
+        </view>
+        </view>
+
